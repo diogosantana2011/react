@@ -3,19 +3,19 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="My New Home">
+      <header className="header">
+        <img src={logo} className="MNH-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Diogos attempt at building a react only site.
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="MNH-link"
+          href="https://google.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          My New Home
         </a>
       </header>
     </div>
