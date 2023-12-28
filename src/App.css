@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  height: 200px;
+  border: 1.5px solid rgb(192, 144, 22);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
