@@ -4,4 +4,31 @@ const user = {
     imageSize: 90,
 };
 
-export { user };
+const hobbies = [
+    {
+        id: 0,
+        type: 'sport',
+        name: 'football',
+        practiced: true
+    },
+    {
+        id: 1,
+        type: 'virtual',
+        name: 'gaming',
+        practiced: true
+    },
+    {
+        id: 2,
+        type: 'leisure',
+        name: 'hiking',
+        practiced: true
+    },
+    {
+        id: 3,
+        type: 'sport',
+        name: 'mountain climing',
+        practiced: false
+    }
+];
+
+export { user, hobbies };
