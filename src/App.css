@@ -38,16 +38,88 @@
     }
   }
 
-  /* button {
-    height: 50px;
-    border-radius: 5px;
-    border: 1.5px solid rgb(18, 17, 15);
-    margin: 0;
-    position: fixed;
-    top: 50%;
-    left: 44%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  } */
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+
+  .board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+  code {
+    font-size: 1.2em;
+  }
+  
+  ul {
+    padding-inline-start: 20px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    cursor: pointer;
+  }
+
+  .board-row {
+    padding-left: 47.3%;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+    padding-left: 47.5%;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+  
+  ol {
+    padding-left: 47%;
+  }
 }
  
