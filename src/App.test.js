@@ -4,6 +4,7 @@ import Game from './components/game';
 import MyButton from './components/button';
 import Profile  from '../src/components/profile.js';
 import AboutPage from './components/aboutPage.js';
+import { user } from './utils/utils.js';
 
 describe('Component rendering tests', () => {
   it('renders App component', () => {
@@ -26,7 +27,7 @@ describe('Component rendering tests', () => {
 
   it('renders Profile component', () => {
     render(<Profile />);
-    const linkElement = screen.getByText(/Diogo Santana/i);
+    const linkElement = screen.getByAltText(`Photo of ${user.name}`);
     expect(linkElement).toBeInTheDocument();
   });
 
@@ -36,3 +37,8 @@ describe('Component rendering tests', () => {
     expect(linkElement).toBeInTheDocument();
   });
 });
+
+/**
+ * Add test to component functionality
+ * game.js file
+ */
