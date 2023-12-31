@@ -5,13 +5,14 @@ export default function Profile() {
         <div>
             <h1>{user.name}</h1>
             <img
-            className="avatar"
-            src={user.imageUrl}
-            alt={`Photo of ${user.name}`}
-            style={{
-                width: user.imageSize,
-                height: user.imageSize
-            }}
+                className="avatar"
+                src={user.imageUrl}
+                alt={`Displays the person ${user.name}`}
+                style={{
+                    width: user.imageSize,
+                    height: user.imageSize
+                }
+            }
         />
         </div>
     );

@@ -11,7 +11,6 @@ export default function App() {
   const handleClick = () => {
       setCount(count + 1)
   };
-
   return (
     <div className="My New Home">
       <header className="header">

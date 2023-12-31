@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component functional tests WHEN <Button /> renders, its clickable 1`] = `
+<DocumentFragment>
+  <button
+    class="clickMe"
+  >
+    I'm a button. You've clicked me  times
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Component functional tests WHEN <Square /> renders, its clickable 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="square"
+    class="square"
+  />
+</DocumentFragment>
+`;
