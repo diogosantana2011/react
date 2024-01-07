@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
-import './App.css';
 import { useState } from 'react';
 import MyButton from './components/button';
 import Profile  from '../src/components/profile.js';
 import AboutPage from './components/aboutPage.js';
 import Game from './components/game.js';
+import './App.css';
 
 export default function App() {
   const [count, setCount] = useState(0);

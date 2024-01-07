@@ -1,3 +1,5 @@
+[![Continuous integration status](https://github.com/diogosantana2011/react/actions/workflows/node.js.yml/badge.svg)](https://github.com/diogosantana2011/react/actions/workflows/node.js.yml)
+
 # Diogo's  playaround with basic React App
 
 To go through documentation open [Learn react](https://react.dev/learn) to view it in your browser.
