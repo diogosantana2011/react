@@ -1,5 +1,11 @@
 import { useState } from 'react';
 
+/**
+ * TODO: 
+ * Add - isDraw()
+ * Add - resetBoard()
+ */
+
 export function Square({ value, onSquareClick }) {
     return <button className="square" aria-label="square" onClick={onSquareClick}>
         {value}

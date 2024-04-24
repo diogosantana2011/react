@@ -22,14 +22,6 @@ export default function App() {
             Diogos attempt at building a react only site, with the idea of the estate agent app showing a website.
             While I'm learning how to implement above idea, I built few random components.
           </p>
-          {/* <a
-            className="MNH-link"
-            href="https://google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            My New Home
-          </a> */}
           <AboutPage />
           </center>
           <Game />
