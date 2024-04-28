@@ -1,11 +1,11 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App';
-import Game, { Square } from './components/game';
+import Game, { Square, calculateWinner } from './components/game';
 import MyButton from './components/button';
 import Profile  from '../src/components/profile.js';
 import AboutPage from './components/aboutPage.js';
-import { user } from './utils/utils.js';
+import { user, expectedWinnerOutcomes } from './utils/utils.js';
 
 afterEach(cleanup);
 
@@ -38,6 +38,35 @@ describe('Component rendering tests', () => {
     render(<AboutPage />);
     const linkElement = screen.getByText(/D'you like my smiling Pepe?/i);
     expect(linkElement).toBeInTheDocument();
+  });
+
+  it('calculateWinner fnc correctly identifies winner', () => {
+    // Assertions
+    expect(calculateWinner(expectedWinnerOutcomes.squares1)).toBe('X');
+    expect(calculateWinner(expectedWinnerOutcomes.squares2)).toBe('O');
+    expect(calculateWinner(expectedWinnerOutcomes.squares3)).toBe('X');
+    expect(calculateWinner(expectedWinnerOutcomes.squares4)).toBe('O');
+    expect(calculateWinner(expectedWinnerOutcomes.squares5)).toBe('X');
+    expect(calculateWinner(expectedWinnerOutcomes.squares6)).toBe('O');
+    expect(calculateWinner(expectedWinnerOutcomes.squares7)).toBe(null); // Draw
+  });
+
+  it('Game should update currentMove and history when hitting move button', async () => {
+    const { getByText, getAllByLabelText } = render(<Game />);
+    
+    const squares = getAllByLabelText('square');
+    fireEvent.click(squares[0])
+    expect(squares[0]).toHaveTextContent('X');
+    fireEvent.click(squares[1])
+    expect(squares[1]).toHaveTextContent('O');
+
+    const moveButtons = getByText(/Go to move 1/i);
+    fireEvent.click(moveButtons)
+    expect(squares[1]).not.toHaveTextContent('O');
+
+    const goToGameStart = getByText(/Go to game start/i);
+    fireEvent.click(goToGameStart)
+    expect(squares[0]).not.toHaveTextContent('X');
   });
 });
 
