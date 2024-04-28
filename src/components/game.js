@@ -1,10 +1,5 @@
 import { useState } from 'react';
-
-/**
- * TODO: 
- * Add - isDraw()
- * Add - resetBoard()
- */
+import { lines } from '../utils/utils';
 
 export function Square({ value, onSquareClick }) {
     return <button className="square" aria-label="square" onClick={onSquareClick}>
@@ -13,17 +8,18 @@ export function Square({ value, onSquareClick }) {
 };
 
 function Board({ xIsNext, squares, onPlay}) {
+    let status;
+    
     function handleClick(i) {
-        if (calculateWinner(squares)|| squares[i]) return;
+        if (calculateWinner(squares) || squares[i]) return;
         const nextSquares = squares.slice();
         xIsNext ? nextSquares[i] = 'X' : nextSquares[i] = 'O';
         onPlay(nextSquares);
     };
 
     const winner = calculateWinner(squares);
-    let status;
-    winner ? status = `Winner is: ${winner}` : status = `Next player: ${(xIsNext ? 'X' : 'O')}`;
-    
+    const isDraw = !winner & squares.every(square => square !== null);
+    status = winner ? `Winner is: ${winner}` : isDraw ? 'The game is a draw' : `Next player: ${(xIsNext ? 'X' : 'O')}`;
     return (
         <>
             <div className='status'>{status}</div>
@@ -61,6 +57,7 @@ export default function Game() {
 
     function jumpTo(nextMove) {
         setCurrentMove(nextMove);
+        setHistory(history.slice(0, nextMove + 1));
     };
 
     const moves = history.map((squares, move) => {
@@ -85,18 +82,7 @@ export default function Game() {
     );
 };
 
-function calculateWinner(squares) {
-    const lines = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ];
-
+export function calculateWinner(squares) {
     for (let i = 0; i < lines.length ; i++) {
         const [a, b, c] = lines[i];
         if (squares[a] && 
