@@ -1,12 +1,30 @@
 import { useState } from 'react';
 import { lines } from '../utils/utils';
 
+
+/**
+ * Square component used by board component.
+ * @export
+ * @param {{ value: any; onSquareClick: any; }} param0
+ * @param {*} param0.value
+ * @param {*} param0.onSquareClick
+ * @returns {*}
+ */
+
 export function Square({ value, onSquareClick }) {
     return <button className="square" aria-label="square" onClick={onSquareClick}>
         {value}
     </button>
 };
 
+/**
+ * Board used by game component.
+ * @param {{ xIsNext: any; squares: any; onPlay: any; }} param0
+ * @param {*} param0.xIsNext
+ * @param {*} param0.squares
+ * @param {*} param0.onPlay
+ * @returns {*}
+ */
 function Board({ xIsNext, squares, onPlay}) {
     let status;
     
@@ -43,6 +61,11 @@ function Board({ xIsNext, squares, onPlay}) {
 };
 
 
+/**
+ * Game component.
+ * @export
+ * @returns {*}
+ */
 export default function Game() {
     const [history, setHistory] = useState([Array(9).fill(null)]);
     const [currentMove, setCurrentMove] = useState(0);
@@ -82,6 +105,14 @@ export default function Game() {
     );
 };
 
+
+/**
+ * Calculates winnder of game.
+ *
+ * @export
+ * @param {*} squares
+ * @returns {*}
+ */
 export function calculateWinner(squares) {
     for (let i = 0; i < lines.length ; i++) {
         const [a, b, c] = lines[i];
