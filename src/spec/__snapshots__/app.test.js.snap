@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AboutPage component 1`] = `
+<p>
+  Hello there!
+  <br />
+   How do you do? D'you like my smiling Pepe?
+</p>
+`;
+
+exports[`renders FilterableProductTable component 1`] = `
+<button
+  class="expand-button"
+>
+  Show Product Table
+</button>
+`;
+
+exports[`renders Game component 1`] = `
+<div
+  class="status"
+>
+  Next player: X
+</div>
+`;
+
+exports[`renders MyButton component 1`] = `
+<button
+  class="clickMe"
+>
+  I'm a button. You've clicked me 
+  0
+   times
+</button>
+`;
+
+exports[`renders profile component 1`] = `
+<img
+  alt="Displays the person Diogo Santana"
+  class="avatar"
+  src="https://static01.nyt.com/images/2016/09/28/us/28xp-pepefrog/28xp-pepefrog-articleLarge.jpg?quality=75&auto=webp"
+  style="width: 90px; height: 90px;"
+/>
+`;

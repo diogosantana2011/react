@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterableProductTable renders without crashing 1`] = `
+<div>
+  <div>
+    <button
+      class="expand-button"
+    >
+      Show Product Table
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutPage component renders about page content 1`] = `
+<p>
+  Hello there!
+  <br />
+   How do you do? D'you like my smiling Pepe?
+</p>
+`;
