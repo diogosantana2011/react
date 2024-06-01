@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game component renders the game board with correct initial state 1`] = `
+Array [
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+  <button
+    aria-label="square"
+    class="square"
+  />,
+]
+`;

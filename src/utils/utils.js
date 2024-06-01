@@ -59,4 +59,28 @@ const expectedWinnerOutcomes = {
     squares7: ['X', 'O', 'X', 'O', 'O', 'X', 'X', 'X', 'O']
 };
 
-export { user, hobbies, lines, expectedWinnerOutcomes };
+const products = [
+    { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+    { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+    { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+    { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+    { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+    { category: "Vegetables", price: "$1", stocked: true, name: "Peas" },
+    { category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football" },
+    { category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball" },
+    { category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball" },
+    { category: "Electronics", price: "$99.99", stocked: true, name: "iPod Touch" },
+    { category: "Electronics", price: "$399.99", stocked: false, name: "iPhone 5" },
+    { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" },
+    { category: "Clothing", price: "$29.99", stocked: true, name: "T-Shirt" },
+    { category: "Clothing", price: "$49.99", stocked: false, name: "Hoodie" },
+    { category: "Clothing", price: "$19.99", stocked: true, name: "Jeans" },
+    { category: "Books", price: "$9.99", stocked: true, name: "The Great Gatsby" },
+    { category: "Books", price: "$14.99", stocked: false, name: "To Kill a Mockingbird" },
+    { category: "Books", price: "$19.99", stocked: true, name: "The Lord of the Rings" },
+    { category: "Toys", price: "$19.99", stocked: true, name: "Lego Set" },
+    { category: "Toys", price: "$29.99", stocked: false, name: "Barbie Doll" },
+    { category: "Toys", price: "$24.99", stocked: true, name: "Hot Wheels Car" }
+];
+
+export { user, hobbies, lines, expectedWinnerOutcomes, products};

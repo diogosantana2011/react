@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyButton component button is clickable 1`] = `
+<button
+  class="clickMe"
+>
+  I'm a button. You've clicked me 
+   times
+</button>
+`;
+
+exports[`MyButton component renders button with correct text 1`] = `
+<button
+  class="clickMe"
+>
+  I'm a button. You've clicked me 
+   times
+</button>
+`;

@@ -1,10 +1,9 @@
 // import logo from './logo.svg';
 import { useState } from 'react';
-import MyButton from './components/button';
-import Profile  from '../src/components/profile.js';
-import AboutPage from './components/aboutPage.js';
-import Game from './components/game.js';
-import './App.css';
+import { MyButton, Profile, AboutPage, Game, FilterableProductTable } from './components';
+import { products } from './utils/utils';
+import './styles/App.css';
+import './styles/productTable.css';
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +24,9 @@ export default function App() {
           <AboutPage />
           </center>
           <Game />
+          <center>
+            <FilterableProductTable products={products} />
+          </center> 
     </div>
   );
 }
